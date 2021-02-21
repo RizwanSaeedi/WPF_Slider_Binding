@@ -1,0 +1,38 @@
+﻿<Window x:Class="TempSliderBinding.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TempSliderBinding"
+        mc:Ignorable="d"
+        Title="MainWindow"
+        Height="450"
+        Width="800"
+        Background='#FFFFE800'>
+    <StackPanel Orientation='Vertical'
+                Margin='20'>
+        <StackPanel.Background>
+            <RadialGradientBrush>
+                <GradientStop Color='#FF02023E'
+                              Offset='1' />
+                <GradientStop Color='Blue' />
+            </RadialGradientBrush>
+        </StackPanel.Background>
+        <Slider x:Name='slider'
+                Margin='168,20,178,0'
+                Minimum='12'
+                HorizontalAlignment='Center'
+                VerticalAlignment='Top'
+                Height='40'
+                Width='406'
+                TickPlacement='BottomRight'
+                Maximum='100' />
+        <Label x:Name='label'
+               Content='Label'
+               Foreground='White'
+               Margin='0 20 10 0'
+               FontSize='{Binding ElementName=slider, Path=Value}'
+               HorizontalAlignment='Center'
+               VerticalAlignment='Top' />
+    </StackPanel>
+</Window>
