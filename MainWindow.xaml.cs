@@ -23,6 +23,7 @@ namespace TempSliderBinding
         public MainWindow()
         {
             InitializeComponent();
+            //
         }
     }
 }
